@@ -15,11 +15,13 @@ body {
   background: var(--bg);
   color: #0f1724;
 }
-/* Стили для логотипа */
-.logo-placeholder img.logo-img {
-  height: 50px;      /* Высота логотипа */
-  width: auto;       /* Автоматическая ширина */
-  display: block;
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;        /* Убираем синий фон */
+  width: auto;             /* Автоширина */
+  height: auto;            /* Автовысота */
 }
 /* layout */
 .container { max-width: 1100px; margin: 0 auto; padding: 18px; }

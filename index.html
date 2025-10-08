@@ -1,37 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кафедры | Расписание</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amanzholov University — Расписание</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
-    <header>
-        <h1>📚 Расписание преподавателей</h1>
-        <p>Выберите кафедру 👇</p>
-    </header>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo-placeholder">AU</div>
+        <div>
+          <h1>Amanzholov University</h1>
+          <p class="subtitle">Расписание преподавателей</p>
+        </div>
+      </div>
+      <nav>
+        <a href="admin.html" class="btn">Админ</a>
+      </nav>
+    </div>
+  </header>
 
-    <main id="departments-container">
-        <!-- Блоки кафедр с эмодзи -->
-        <div class="department" data-dept="math">🧮 Математика</div>
-        <div class="department" data-dept="physics">🔬 Физика и технологии</div>
-        <div class="department" data-dept="it">💻 Информационные технологии</div>
-        <div class="department" data-dept="eco">🌿 Экология и география</div>
-        <div class="department" data-dept="bio">🧬 Биология</div>
-        <div class="department" data-dept="chem">⚗️ Химия</div>
-        <div class="department" data-dept="econ">💰 Экономика, менеджмент и финансы</div>
-        <div class="department" data-dept="law">⚖️ Юриспруденция</div>
-        <div class="department" data-dept="lang">🗣️ Иностранные языки и переводческое дело</div>
-        <div class="department" data-dept="hist">🏛️ История и социально-гуманитарные дисциплины</div>
-        <div class="department" data-dept="phil">📖 Казахская, русская филология и журналистика</div>
-        <div class="department" data-dept="culture">🏋️ Культура, спорт и начальная военная подготовка</div>
-    </main>
+  <main class="container">
+    <section class="panel">
+      <h2>Кафедры</h2>
+      <div id="departments" class="grid"></div>
+    </section>
 
-    <footer>
-        <p>© 2025 Amanzholov University</p>
-    </footer>
+    <section class="panel">
+      <h2 id="teachers-title">Преподаватели</h2>
+      <div id="teachers" class="grid"></div>
+    </section>
+  </main>
 
-    <script src="main.js"></script>
+  <footer class="footer">
+    © Amanzholov University
+  </footer>
 </body>
 </html>

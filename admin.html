@@ -27,13 +27,14 @@
   </header>
 
   <main class="login-wrapper">
-    <div class="login-card">
+    <!-- Login box -->
+    <div id="login-box" class="login-card">
       <h2>Вход администратора</h2>
-      <input type="text" placeholder="Логин">
-      <input type="password" placeholder="Пароль">
+      <input id="login" type="text" placeholder="Логин">
+      <input id="password" type="password" placeholder="Пароль">
       <div class="btn-row">
-        <button class="btn">Войти</button>
-        <button class="btn ghost">Демо-данные</button>
+        <button id="btn-login" class="btn">Войти</button>
+        <button id="btn-init" class="btn ghost">Демо-данные</button>
       </div>
       <p id="login-error" class="text-error"></p>
     </div>

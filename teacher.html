@@ -1,27 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Преподаватели</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Расписание преподавателя — Amanzholov University</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
-    <header>
-        <h1 id="dept-title">📚 Преподаватели</h1>
-        <button onclick="goBack()">⬅ Назад</button>
-    </header>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.html" class="back">← Назад</a>
+        <div>
+          <h1 id="teacher-name">Преподаватель</h1>
+          <p id="teacher-dep" class="subtitle"></p>
+        </div>
+      </div>
+      <nav>
+        <a href="admin.html" class="btn">Админ</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <ul id="teachers-list">
-            <!-- Преподаватели подгружаются через JS -->
-        </ul>
-    </main>
+  <main class="container">
+    <section class="panel">
+      <div class="filters">
+        <label>Неделя:
+          <select id="filter-week">
+            <option value="all">Все</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="odd">Нечётная</option>
+            <option value="even">Чётная</option>
+          </select>
+        </label>
 
-    <footer>
-        <p>© 2025 Amanzholov University</p>
-    </footer>
+        <label>День:
+          <select id="filter-day">
+            <option value="all">Все</option>
+            <option>Понедельник</option>
+            <option>Вторник</option>
+            <option>Среда</option>
+            <option>Четверг</option>
+            <option>Пятница</option>
+            <option>Суббота</option>
+          </select>
+        </label>
 
-    <script src="main.js"></script>
+        <label>Группа:
+          <input id="filter-group" placeholder="Любая" />
+        </label>
+
+        <button id="filter-clear" class="btn ghost">Сброс</button>
+      </div>
+
+      <div class="semester-tabs">
+        <button class="tab-btn active" data-sem="1">1-й семестр</button>
+        <button class="tab-btn" data-sem="2">2-й семестр</button>
+      </div>
+
+      <h2>Расписание (AIS-вид)</h2>
+      <div id="schedule-container"></div>
+    </section>
+  </main>
+
+  <footer class="footer">© Amanzholov University</footer>
 </body>
 </html>

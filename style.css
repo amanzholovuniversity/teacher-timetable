@@ -56,11 +56,18 @@ body {
 
 /* column sizing: keep discipline flexible, make time & room nowrap, group wrap */
 .ais-table th:nth-child(1), .ais-table td:nth-child(1) { width: 10%; }
-.ais-table th:nth-child(2), .ais-table td:nth-child(2) { width: 14%; white-space: nowrap; } /* День or Неделя (depends on layout) */
-.ais-table th:nth-child(3), .ais-table td:nth-child(3) { width: 18%; white-space: nowrap; } /* Время - ensure fits */
+.ais-table th:nth-child(2), .ais-table td:nth-child(2) { width: 14%; white-space: nowrap; } /* День or Неделя */
+.ais-table th:nth-child(3), .ais-table td:nth-child(3) { width: 18%; white-space: nowrap; } /* Время */
 .ais-table th:nth-child(4), .ais-table td:nth-child(4) { /* Дисциплина flexible */ }
 .ais-table th:nth-child(5), .ais-table td:nth-child(5) { width: 13%; white-space: nowrap; } /* Аудитория */
-.ais-table th:nth-child(6), .ais-table td:nth-child(6) { width: 15%; white-space: normal; word-break: break-word; line-height:1.25; text-align:left; padding-left:10px; } /* Группа, allow wrap */
+.ais-table th:nth-child(6), .ais-table td:nth-child(6) {
+  width: 15%;
+  white-space: normal;
+  word-break: break-word;
+  line-height:1.25;
+  text-align:left;
+  padding-left:10px;
+} /* Группа */
 
 .ais-table td:nth-child(4) { font-weight:700; } /* discipline bold */
 

@@ -1,4 +1,4 @@
-/* стиль для проекта — чисто, сине-белый */
+/* 🌊 Базовая цветовая схема */
 :root {
   --blue: #0b63d6;
   --bg: #f2f5fb;
@@ -7,7 +7,10 @@
   --accent: #0b63d6;
 }
 
-* { box-sizing: border-box; }
+/* 🔹 Общие стили */
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
@@ -16,104 +19,342 @@ body {
   color: #0f1724;
 }
 
-/* ---------- ЛОГОТИП ---------- */
+/* ---------- 🖼️ ЛОГОТИП ---------- */
 .logo-placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
-  /* убираем фиксированные размеры */
   width: auto;
   height: auto;
   overflow: visible;
-  margin-right: 12px; /* ✨ аккуратный отступ справа */
+  margin-right: 12px;
 }
 
 .logo-placeholder img.logo-img {
-  height: 55px;      /* задаём только высоту */
-  width: auto;       /* ширина пропорциональна */
+  height: 55px;
+  width: auto;
   display: block;
 }
-/* ---------- HEADER / LAYOUT ---------- */
-.container { max-width: 1100px; margin: 0 auto; padding: 18px; }
-.site-header { background: var(--card); border-bottom: 1px solid #e6eefc; padding: 12px 0; }
-.site-header .container { display:flex; align-items:center; justify-content:space-between; gap:12px; }
-.brand { display:flex; gap:12px; align-items:center; }
 
-.site-header h1 { margin:0; font-size:18px; }
-.subtitle { margin:0; color:var(--muted); font-size:13px; }
+/* ---------- 🧭 HEADER / LAYOUT ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
+}
 
-.btn { background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; }
-.btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid #e6eefc;
+  padding: 12px 0;
+}
 
-.panel { background:var(--card); padding:14px; border-radius:10px; box-shadow:0 4px 14px rgba(11,99,214,0.06); margin-bottom:14px; }
-.grid { display:flex; flex-wrap:wrap; gap:12px; }
-.card { background:#fff; padding:10px; border-radius:8px; min-width:220px; box-shadow:0 2px 8px rgba(16,24,40,0.03); }
-.card .meta { color:var(--muted); font-size:13px; margin-top:6px; }
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
 
-.footer { padding:18px 0; text-align:center; color:var(--muted); font-size:14px; margin-top:18px; }
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
 
-/* ---------- TABLE (AIS-style) ---------- */
+.site-header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- 🟦 КНОПКИ ---------- */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #084fae;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn.ghost:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- 📋 ПАНЕЛИ ---------- */
+.panel {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(11, 99, 214, 0.06);
+  margin-bottom: 14px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+}
+
+.card .meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ---------- 🦶 ПОДВАЛ ---------- */
+.footer {
+  padding: 18px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+/* ---------- 📊 ТАБЛИЦЫ (AIS-style) ---------- */
 .ais-table {
-  width:100%;
-  border-collapse:collapse;
-  background:#fff;
-  border-radius:6px;
-  overflow:hidden;
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
   table-layout: fixed;
 }
-.ais-table th, .ais-table td {
-  border:1px solid #e6eefc;
-  padding:10px;
-  font-size:14px;
+
+.ais-table th,
+.ais-table td {
+  border: 1px solid #e6eefc;
+  padding: 10px;
+  font-size: 14px;
   vertical-align: middle;
   text-align: center;
   word-wrap: break-word;
 }
-.ais-table th { background:#f8fbff; color:var(--blue); font-weight:600; }
 
-.ais-table th:nth-child(1), .ais-table td:nth-child(1) { width: 10%; }
-.ais-table th:nth-child(2), .ais-table td:nth-child(2) { width: 14%; white-space: nowrap; }
-.ais-table th:nth-child(3), .ais-table td:nth-child(3) { width: 18%; white-space: nowrap; }
-.ais-table th:nth-child(4), .ais-table td:nth-child(4) { }
-.ais-table th:nth-child(5), .ais-table td:nth-child(5) { width: 13%; white-space: nowrap; }
-.ais-table th:nth-child(6), .ais-table td:nth-child(6) {
+.ais-table th {
+  background: #f8fbff;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.ais-table th:nth-child(1),
+.ais-table td:nth-child(1) {
+  width: 10%;
+}
+
+.ais-table th:nth-child(2),
+.ais-table td:nth-child(2) {
+  width: 14%;
+  white-space: nowrap;
+}
+
+.ais-table th:nth-child(3),
+.ais-table td:nth-child(3) {
+  width: 18%;
+  white-space: nowrap;
+}
+
+.ais-table th:nth-child(5),
+.ais-table td:nth-child(5) {
+  width: 13%;
+  white-space: nowrap;
+}
+
+.ais-table th:nth-child(6),
+.ais-table td:nth-child(6) {
   width: 15%;
   white-space: normal;
   word-break: break-word;
-  line-height:1.25;
-  text-align:left;
-  padding-left:10px;
+  line-height: 1.25;
+  text-align: left;
+  padding-left: 10px;
 }
 
-.ais-table td:nth-child(4) { font-weight:700; }
+.ais-table td:nth-child(4) {
+  font-weight: 700;
+}
 
-/* ---------- SEMESTER TABS ---------- */
-.semester-tabs { margin: 10px 0; display:flex; gap:8px; }
-.tab-btn { padding:8px 12px; border-radius:8px; border:1px solid transparent; background:transparent; cursor:pointer; }
-.tab-btn.active { background:var(--accent); color:white; border-color:var(--accent); }
+/* ---------- 📅 ВКЛАДКИ СЕМЕСТРОВ ---------- */
+.semester-tabs {
+  margin: 10px 0;
+  display: flex;
+  gap: 8px;
+}
 
-/* ---------- ADMIN ---------- */
-.admin-layout { display:grid; grid-template-columns: 320px 1fr; gap:12px; }
-.list-admin { display:flex; flex-direction:column; gap:8px; }
-.admin-item { display:flex; justify-content:space-between; align-items:center; padding:8px; border-radius:6px; background:#fbfdff; border:1px solid #eef6ff; }
-.admin-actions { display:flex; gap:6px; }
-.text-error { color:#b91c1c; }
-.admin-row-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:8px; }
+.tab-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
-/* ---------- MODAL ---------- */
-.modal { position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(2,6,23,0.45); display:flex; align-items:center; justify-content:center; padding:20px; }
-.modal-body { max-width:720px; width:100%; position:relative; }
-.modal-close { position:absolute; right:12px; top:8px; border:none; background:transparent; font-size:20px; cursor:pointer; }
-input, select, textarea { padding:8px; border-radius:6px; border:1px solid #e6eefc; width:100%; margin:6px 0; font-size:14px; }
-label { display:block; font-weight:600; margin-top:8px; }
-.filters { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; align-items:center; }
-.ghost { background:transparent; border:1px solid #cfe0ff; color:var(--accent); }
-.small { padding:6px 8px; font-size:13px; border-radius:6px; }
+.tab-btn:hover {
+  background: #e8f1ff;
+}
 
-/* ---------- MOBILE ---------- */
+.tab-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* ---------- ⚙️ ADMIN ---------- */
+.admin-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 12px;
+}
+
+.list-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 6px;
+  background: #fbfdff;
+  border: 1px solid #eef6ff;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.text-error {
+  color: #b91c1c;
+}
+
+.admin-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+/* ---------- 💬 МОДАЛЬНЫЕ ОКНА ---------- */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(2, 6, 23, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-body {
+  max-width: 720px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ---------- 📝 ФОРМЫ ---------- */
+input,
+select,
+textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e6eefc;
+  width: 100%;
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid #cfe0ff;
+  color: var(--accent);
+}
+
+.small {
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+/* ---------- 📱 АДАПТИВ ---------- */
 @media (max-width: 768px) {
-  .admin-layout { grid-template-columns: 1fr; }
-  .ais-table th, .ais-table td { font-size:12px; padding:8px; }
-  .ais-table { display:block; overflow-x:auto; white-space:nowrap; }
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ais-table th,
+  .ais-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .ais-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .logo-placeholder img.logo-img {
+    height: 45px;
+  }
 }

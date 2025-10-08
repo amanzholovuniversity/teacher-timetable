@@ -2,21 +2,22 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Админ — Amanzholov University</title>
-  <link rel="icon" type="image/png" href="icon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="icon.png">
   <link rel="stylesheet" href="style.css">
   <script defer src="admin.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-flex">
       <div class="brand">
         <div class="logo-placeholder">
           <img src="logo_vkgu_amanzholov.png" alt="Логотип" class="logo-img">
+        </div>
         <div>
-          <h1>Админ-панель</h1>
-          <p class="subtitle">Amanzholov University — управление расписанием</p>
+          <h1>Amanzholov University</h1>
+          <p class="subtitle">управление расписанием</p>
         </div>
       </div>
       <nav>
@@ -25,15 +26,14 @@
     </div>
   </header>
 
-  <main class="container admin-layout">
-    <!-- Login -->
-    <div id="login-box" class="panel">
+  <main class="login-wrapper">
+    <div class="login-card">
       <h2>Вход администратора</h2>
-      <input id="login" placeholder="Логин" />
-      <input id="password" placeholder="Пароль" type="password" />
-      <div style="display:flex;gap:8px;align-items:center">
-        <button id="btn-login" class="btn">Войти</button>
-        <button id="btn-init" class="btn ghost" title="Заполнить демо-данными">Демо-данные</button>
+      <input type="text" placeholder="Логин">
+      <input type="password" placeholder="Пароль">
+      <div class="btn-row">
+        <button class="btn">Войти</button>
+        <button class="btn ghost">Демо-данные</button>
       </div>
       <p id="login-error" class="text-error"></p>
     </div>

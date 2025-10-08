@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Админ — Amanzholov University</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo-placeholder">AU</div>
+        <div>
+          <h1>Админ-панель</h1>
+          <p class="subtitle">Amanzholov University — управление расписанием</p>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html" class="btn">На сайт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin-layout">
+    <!-- Login -->
+    <div id="login-box" class="panel">
+      <h2>Вход администратора</h2>
+      <input id="login" placeholder="Логин" />
+      <input id="password" placeholder="Пароль" type="password" />
+      <div style="display:flex;gap:8px;align-items:center">
+        <button id="btn-login" class="btn">Войти</button>
+        <button id="btn-init" class="btn ghost" title="Заполнить демо-данными">Демо-данные</button>
+      </div>
+      <p id="login-error" class="text-error"></p>
+    </div>
+
+    <!-- Admin panel -->
+    <div id="admin-panel" class="panel" style="display:none">
+      <div class="admin-row-top">
+        <div>
+          <button id="btn-logout" class="btn ghost">Выйти</button>
+        </div>
+        <div>
+          <button id="btn-add-dep" class="btn">Добавить кафедру</button>
+          <button id="btn-add-teacher" class="btn">Добавить преподавателя</button>
+          <button id="btn-add-schedule" class="btn">Добавить занятие</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <h3>Кафедры</h3>
+      <div id="deps-admin" class="list-admin"></div>
+
+      <h3>Преподаватели</h3>
+      <div id="teachers-admin" class="list-admin"></div>
+
+      <h3>Расписания</h3>
+      <div id="schedules-admin" class="list-admin"></div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" style="display:none">
+    <div class="modal-body panel">
+      <button id="modal-close" class="modal-close">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <footer class="footer">© Amanzholov University</footer>
+</body>
+</html>
